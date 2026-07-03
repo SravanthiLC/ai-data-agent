@@ -1,0 +1,10 @@
+# Data
+data/
+
+# Environment
+.v1/
+.env
+
+# Python
+__pycache__/
+*.pyc
