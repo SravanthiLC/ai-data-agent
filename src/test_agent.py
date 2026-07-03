@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import os
 from smolagents import CodeAgent, LiteLLMModel
-from tools import list_csv_files
+from tools import list_csv_files, get_csv_columns
 
 load_dotenv()
 
@@ -11,8 +11,9 @@ model = LiteLLMModel(
 )
 
 agent = CodeAgent(
-    tools=[list_csv_files],
+    tools=[list_csv_files, get_csv_columns],
     model=model,
 )
 
 print(agent.run("What CSV files are available?"))
+print(agent.run("What are the columns in olist_customers_dataset.csv?"))
