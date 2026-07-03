@@ -2,7 +2,7 @@
 data/
 
 # Environment
-.v1/
+v1/
 .env
 
 # Python
